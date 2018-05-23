@@ -8,7 +8,7 @@ Go언어 기반의 급식, 학사일정 파싱 라이브러리입니다.
 schapi-go 는 GOPATH의 프로젝트에 다음과 같이 설치할 수 있습니다.  
 
 ```
-go get github.com/DSM-SchoolAPI/Schapi-Go
+go get github.com/DSM-SchoolAPI/schapi-go
 ```
 
 ## 2. 예제
@@ -17,7 +17,7 @@ go get github.com/DSM-SchoolAPI/Schapi-Go
 불러와 출력하는 예제입니다.
 
 ```
-schl := schapi.School(schapi.KinderGarden, schapi.Daejeon, "G10000170")
+schl := schapi.NewSchool(schapi.KinderGarden, schapi.Daejeon, "G10000170")
 fmt.Println(schl.GetMonthlyMeals(2018, 5, 23))
 ```
 
