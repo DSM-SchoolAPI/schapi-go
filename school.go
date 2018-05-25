@@ -1,28 +1,13 @@
 package schapi
 
-import (
-	"strings"
-)
-
 type SchoolKind int
 
 const (
-	KinderGarden SchoolKind = 1 + iota
+	KinderGarten SchoolKind = 1 + iota
 	ElementrySchool
 	MiddleSchool
 	HighSchool
 )
-
-func GetSchoolKind(kind string) SchoolKind {
-	kinds := map[string]SchoolKind{
-		"kinder-garden":    KinderGarden,
-		"elementry-school": ElementrySchool,
-		"middle-school":    MiddleSchool,
-		"high-school":      HighSchool,
-	}
-
-	return kinds[strings.ToLower(kind)]
-}
 
 type SchoolRegion string
 
@@ -46,51 +31,18 @@ const (
 	Jeju                   = "stu.jje.go.kr"
 )
 
-func GetSchoolRegion(region string) SchoolRegion {
-	regions := map[string]SchoolRegion{
-		"seoul":     Seoul,
-		"incheon":   Incheon,
-		"busan":     Busan,
-		"gwangju":   Gwangju,
-		"daejeon":   Daejeon,
-		"daegu":     Daegu,
-		"sejong":    Sejong,
-		"ulsan":     Ulsan,
-		"gyeonggi":  Gyeonggi,
-		"kangwon":   Kangwon,
-		"chungbuk":  Chungbuk,
-		"chungnam":  Chungnam,
-		"gyeongbuk": Gyeongbuk,
-		"gyeongnam": Gyeongnam,
-		"jeonbuk":   Jeonbuk,
-		"jeonnam":   Jeonnam,
-		"jeju":      Jeju,
-	}
-
-	return regions[strings.ToLower(region)]
-}
-
 type SchoolCode string
 
-type School struct {
+type SchoolAPI struct {
 	Kind   SchoolKind
 	Region SchoolRegion
 	Code   SchoolCode
 }
 
-func NewSchool(kind SchoolKind, region SchoolRegion, code SchoolCode) *School {
-	school := new(School)
-	school.Kind = kind
-	school.Region = region
-	school.Code = code
-
-	return school
-}
-
-func (school School) GetDailyMenu(year int, month int, date int) Menu {
-	return GetDailyMenu(school, year, month, date)
-}
-
-func (school School) GetMonthlyMenus(year int, month int) map[int]Menu {
-	return GetMonthlyMenus(school, year, month)
+func NewSchoolAPI(kind SchoolKind, region SchoolRegion, code SchoolCode) *SchoolAPI {
+	return &SchoolAPI{
+		Kind: kind,
+		Region: region,
+		Code: code,
+	}
 }
