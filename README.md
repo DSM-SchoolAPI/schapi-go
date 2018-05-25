@@ -18,7 +18,7 @@ go get github.com/DSM-SchoolAPI/schapi-go
 
 ```
 api := schapi.NewSchoolAPI(schapi.HighSchool, schapi.Daejeon, "G100000170")
-fmt.Println(api.GetMonthlyMeals(2018, 5)[23].Lunch)
+fmt.Println(api.GetMonthlyMenus(2018, 5)[23].Lunch)
 ```
 
 ## 3. 음;
