@@ -13,8 +13,8 @@ go get github.com/DSM-SchoolAPI/schapi-go
 
 ## 2. 예제
 
-다음은 대덕소프트웨어마이스터고등학교 (G100000170) 의 5월 23일자 점심을  
-불러와 출력하는 예제입니다.
+다음은 대덕소프트웨어마이스터고등학교 (G100000170) 의 5월 23일자 점심  
+식단표를 불러와 출력하는 예제입니다.
 
 ```
 api := schapi.NewSchoolAPI(schapi.HighSchool, schapi.Daejeon, "G100000170")
