@@ -8,9 +8,9 @@ import (
 )
 
 type Menu struct {
-	Breakfast []string
-	Lunch     []string
-	Dinner    []string
+	Breakfast []string `json:"breakfast"`
+	Lunch     []string `json:"lunch"`
+	Dinner    []string `json:"dinner"`
 }
 
 func NewMenu() *Menu {

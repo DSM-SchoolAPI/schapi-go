@@ -34,9 +34,9 @@ const (
 type SchoolCode string
 
 type SchoolAPI struct {
-	Kind   SchoolKind
-	Region SchoolRegion
-	Code   SchoolCode
+	Kind   SchoolKind   `json:"kind"`
+	Region SchoolRegion `json:"region"`
+	Code   SchoolCode   `json:"code"`
 }
 
 func NewSchoolAPI(kind SchoolKind, region SchoolRegion, code SchoolCode) *SchoolAPI {
