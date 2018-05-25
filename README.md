@@ -32,4 +32,4 @@ fmt.Println(api.GetMonthlyMeals(2018, 5)[23].Lunch)
 
 
 현재 API 구조를 기존 Schapi 와 비슷하게 변경하고
-학사일정 기능 추가를 고려하고 있습니다 ~_~
+학사일정 기능 추가를 고려하고 있습니다 
