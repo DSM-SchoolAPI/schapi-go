@@ -13,12 +13,12 @@ go get github.com/DSM-SchoolAPI/schapi-go
 
 ## 2. 예제
 
-다음은 대덕소프트웨어마이스터고등학교 (G10000170) 의 월간 식단을  
+다음은 대덕소프트웨어마이스터고등학교 (G100000170) 의 5월 23일자 점심을  
 불러와 출력하는 예제입니다.
 
 ```
-schl := schapi.NewSchool(schapi.KinderGarden, schapi.Daejeon, "G10000170")
-fmt.Println(schl.GetMonthlyMeals(2018, 5, 23))
+api := schapi.NewSchoolAPI(schapi.HighSchool, schapi.Daejeon, "G100000170")
+fmt.Println(api.GetMonthlyMeals(2018, 5)[23].Lunch)
 ```
 
 ## 3. 음;
@@ -28,4 +28,8 @@ fmt.Println(schl.GetMonthlyMeals(2018, 5, 23))
 
 
 그래서 추후 Schapi의 구조에 맞게 라이브러리 구조를 변경하고 학사일정  
-파싱 기능을 추가하는 마이그레이션 작업을 진행할 예정입니다.
+파싱 기능을 추가하는 마이그레이션 작업을 진행하고 있습니다!
+
+
+현재 API 구조를 기존 Schapi 와 비슷하게 변경하고
+학사일정 기능 추가를 고려하고 있습니다 ~_~
